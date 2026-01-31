@@ -9,50 +9,45 @@
             margin: 0;
             padding: 0;
             min-height: 100%;
-            background-color: #000; /* Pure black background */
+            background-color: #000; /* Pure black */
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 3vh; /* Slight push from the top */
             overflow-x: hidden;
         }
 
-        /* The Hero Image Container - No borders or shadows */
+        /* The Hero Image Container - Flushed to the top */
         .splash-container {
-            width: 100%; /* Allows it to expand to full width if needed */
-            max-width: 1200px; /* Limits the size on massive monitors */
-            max-height: 80vh; /* Increased from 65vh so the image can be much larger */
-            margin-bottom: 40px !important; /* Guaranteed gap */
+            width: 100%; 
             display: flex;
             justify-content: center;
+            margin-bottom: 30px; /* Space between image and button */
         }
 
         .splash-image {
-            width: 90%; /* Keeps a small margin on the sides */
+            width: 100%; /* Spans the full width of the screen */
+            max-width: 100%; /* No side margins */
             height: auto;
-            max-height: 80vh; 
             display: block;
-            object-fit: contain;
-            /* Removed border and box-shadow to let it blend into the #000 background */
+            /* No borders or shadows to allow blending */
         }
 
         /* The Legacy "Message Board" Button */
         .enter-button {
             cursor: pointer;
             transition: transform 0.2s ease, filter 0.3s ease;
-            filter: brightness(0.8);
-            margin-bottom: 60px; /* Space at the very bottom */
+            filter: brightness(0.9);
+            margin-bottom: 60px; /* Safe space at the bottom */
         }
 
         .enter-button:hover {
             transform: scale(1.05);
-            filter: brightness(1.1) drop-shadow(0 0 15px rgba(255, 0, 0, 0.4));
+            filter: brightness(1.2) drop-shadow(0 0 15px rgba(255, 0, 0, 0.4));
         }
 
         /* Mobile Optimization */
         @media (max-width: 600px) {
-            .splash-container { max-height: 60vh; margin-bottom: 30px !important; }
-            .splash-image { width: 95%; max-height: 60vh; }
+            .splash-container { margin-bottom: 25px; }
             .enter-button { width: 220px; height: auto; }
         }
     </style>
