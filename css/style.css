@@ -27,14 +27,19 @@ body, html {
 
 /* --- 3. HEADER --- */
 .site-header {
+    position: absolute; /* Overlays the background */
+    top: 0;
+    left: 0;
     width: 100%;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 0; /* Removed the 20px gap at the top */
+    z-index: 10;    /* Ensures it stays above the background */
 }
 
 .header-blade {
-    width: 60%;
-    max-width: 500px;
+    width: 100%;    /* Spans the full width of the screen */
+    height: auto;   /* Keeps the proportions perfect */
+    display: block;
 }
 
 /* --- 4. THE WORKBENCH --- */
