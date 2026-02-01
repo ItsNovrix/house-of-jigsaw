@@ -92,17 +92,22 @@ body, html {
 }
 
 /* --- 6. FOLDER STAMP --- */
+.folder-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
 .folder-stamp {
     position: absolute;
-    top: 52%; /* Nudged down slightly */
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-7deg);
     font-family: 'Anorexia';
     color: rgba(60, 0, 0, 0.6);
-    font-size: 0.9rem; /* Shrunk from 1rem to fit better */
+    font-size: 1rem;
     pointer-events: none;
     text-align: center;
-    width: 80%;
+    width: 100%;
 }
 
 .folder-stamp {
