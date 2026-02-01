@@ -80,7 +80,7 @@ body, html {
 }
 
 .nav-item:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
 }
 
 .nav-item:hover img {
@@ -111,7 +111,7 @@ body, html {
     transform: translate(-50%, -50%) rotate(-7deg);
     font-family: 'Anorexia';
     color: rgba(60, 0, 0, 0.6);
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     pointer-events: none;
     text-align: center;
     width: 100%;
