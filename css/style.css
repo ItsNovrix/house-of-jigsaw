@@ -53,7 +53,7 @@ body, html {
     width: auto;
     max-width: 650px; /* Limits width to stay inside the box */
     margin-left: 190px;  /* Pushes icons to the RIGHT */
-    margin-top: -50px;  /* Pushes icons UP (negative moves up) */
+    margin-top: -30px;  /* Pushes icons UP (negative moves up) */
 }
 
 /* --- 5. ICONS & TITLES --- */
@@ -74,7 +74,7 @@ body, html {
 .recorder-icon img { width: 200px; } 
 .folder-icon img { width: 200px; } 
 .disk-icon img { width: 195px; }
-.discord-icon img { width: 200px; }
+.discord-icon img { width: 185px; }
 
 .nav-item:hover {
     transform: scale(1.05); /* Subtle pop instead of floating up */
