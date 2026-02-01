@@ -52,7 +52,7 @@ body, html {
     gap: 35px 90px; /* Vertical gap, Horizontal gap */
     width: auto;
     max-width: 650px; /* Limits width to stay inside the box */
-    margin-left: 80px;  /* Pushes icons to the RIGHT */
+    margin-left: 130px;  /* Pushes icons to the RIGHT */
     margin-top: -50px;  /* Pushes icons UP (negative moves up) */
 }
 
