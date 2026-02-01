@@ -52,7 +52,7 @@ body, html {
     gap: 35px 90px; /* Vertical gap, Horizontal gap */
     width: auto;
     max-width: 650px; /* Limits width to stay inside the box */
-    margin-left: 130px;  /* Pushes icons to the RIGHT */
+    margin-left: 170px;  /* Pushes icons to the RIGHT */
     margin-top: -50px;  /* Pushes icons UP (negative moves up) */
 }
 
@@ -71,10 +71,10 @@ body, html {
     transition: filter 0.3s ease;
 }
 
-.recorder-icon img { width: 150px; } 
-.folder-icon img { width: 170px; } 
-.disk-icon img { width: 125px; }
-.discord-icon img { width: 170px; }
+.recorder-icon img { width: 180px; } 
+.folder-icon img { width: 200px; } 
+.disk-icon img { width: 155px; }
+.discord-icon img { width: 200px; }
 
 .nav-item:hover {
     transform: scale(1.05); /* Subtle pop instead of floating up */
