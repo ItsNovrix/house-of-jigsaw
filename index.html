@@ -81,21 +81,21 @@
 <body>
 
     <div class="splash-container">
-        <img src="HOJ_BG_2.png" alt="Welcome to the House of Jigsaw" class="splash-image">
+        <img src="images/HOJ_BG_2.png" alt="Welcome to the House of Jigsaw" class="splash-image">
     </div>
 
     <a href="javascript:void(0)" onclick="enterTheHouse()">
-        <img src="Enter_V1.gif" alt="Enter the House of Jigsaw" class="enter-button">
+        <img src="images/Enter_V1.gif" alt="Enter the House of Jigsaw" class="enter-button">
     </a>
 
-    <img src="XMarksTheSpot.jpg" id="audio-toggle" alt="X">
+    <img src="images/XMarksTheSpot.jpg" id="audio-toggle" alt="X">
 
     <audio id="ambiance-loop" loop>
-        <source src="Surprised.mp3" type="audio/mpeg">
+        <source src="audio/Surprised.mp3" type="audio/mpeg">
     </audio>
 
     <audio id="enter-sting">
-        <source src="1_camera.mp3" type="audio/mpeg">
+        <source src="audio/1_camera.mp3" type="audio/mpeg">
     </audio>
 
     <script>
@@ -119,12 +119,12 @@
             // 1. Play the camera sting
             sting.play().catch(function(e) {
                 // If audio is blocked, redirect immediately
-                window.location.href = "https://join.houseofjigsaw.gg";
+                window.location.href = "workshop.html";
             });
             
-            // 2. Wait 1.8 seconds then redirect
+            // 2. Wait 1.8 seconds then redirect to Workshop
             setTimeout(function() {
-                window.location.href = "https://join.houseofjigsaw.gg";
+                window.location.href = "workshop.html";
             }, 1800);
         }
     </script>
