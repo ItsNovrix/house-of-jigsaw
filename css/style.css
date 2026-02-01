@@ -72,7 +72,7 @@ body, html {
 
 /* Strict Sizes */
 .recorder-icon img { width: 120px; } 
-.folder-icon img { width: 190px; } 
+.folder-icon img { width: 120px; } 
 .disk-icon img { width: 120px; }
 .discord-icon img { width: 200px; }
 
