@@ -75,6 +75,10 @@ body, html {
 .disk-icon img { width: 120px; }
 .discord-icon img { width: 200px; }
 
+.folder-icon {
+    margin-bottom: -4px; 
+}
+
 .nav-item:hover img {
     filter: brightness(1) contrast(1) sepia(0);
     transform: translateY(-5px);
