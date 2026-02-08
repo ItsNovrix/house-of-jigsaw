@@ -101,6 +101,7 @@ body, html {
     width: 100%;
     text-align: center;
     z-index: 100;
+    padding-bottom: 60px;
 }
 
 .global-footer nav {
@@ -205,8 +206,7 @@ body, html {
 
 .player-grid {
     display: grid;
-    /* Responsive Grid: 2 columns on mobile, 3 columns on desktop */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr); 
     gap: 40px;
     max-width: 1100px;
     width: 90%;
@@ -235,6 +235,16 @@ body, html {
     filter: sepia(0.2) contrast(1.1);
 }
 
+.player-grid > :nth-child(7) {
+    grid-column: 1 / 2;
+    margin-left: 50%;
+}
+
+.player-grid > :nth-child(8) {
+    grid-column: 2 / 3;
+    margin-left: 50%;
+}
+
 .tape-label {
     font-family: 'EdoSZ';
     font-size: 1.8rem;
@@ -247,5 +257,12 @@ body, html {
     .player-grid {
         grid-template-columns: 1fr; /* Stack vertically on phones */
         width: 80%;
+    }
+
+    /* Disable the centering logic on mobile so it stays a single list */
+    .player-grid > :nth-child(7),
+    .player-grid > :nth-child(8) {
+        grid-column: auto;
+        margin-left: 0;
     }
 }
