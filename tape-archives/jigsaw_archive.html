@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jigsaw Tapes | House of Jigsaw</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="archive-body">
+
+    <header class="site-header">
+        <img src="../images/saw-blade-header.png" alt="House of Jigsaw" class="header-blade">
+    </header>
+
+    <main class="archive-container">
+        
+        <h1 class="archive-title">JIGSAW (2017) TAPES</h1>
+
+        <div class="player-grid">
+            
+            <div class="tape-card" onclick="playTape('Bucket_Room_Tape.mp3')">
+                <img src="../images/Bucket_Room_Player.png" alt="Bucket Room Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Chain_Hangers_Tape.mp3')">
+                <img src="../images/Chain_Hangers_Player.png" alt="Chain Hangers Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Leg_Wires_Tape.mp3')">
+                <img src="../images/Leg_Wires_Player.png" alt="Leg Wires Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Grain_Silo_Tape.mp3')">
+                <img src="../images/Grain_Silo_Player.png" alt="Grain Silo Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Cycle_Trap_Tape.mp3')">
+                <img src="../images/Cycle_Trap_Player.png" alt="Cycle Trap Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Shotgun_Keys_Tape.mp3')">
+                <img src="../images/Shotgun_Keys_Player.png" alt="Shotgun Keys Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Laser_Collars_Tape.mp3')">
+                <img src="../images/Laser_Collars_Player.png" alt="Laser Collars Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('USB_Tape.mp3')">
+                <img src="../images/USB_Player.png" alt="USB Drive Audio">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Edgar_Tape.mp3')">
+                <img src="../images/Edgar_Player.png" alt="Edgar Munsen Tape">
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="global-footer">
+        <nav>
+            <a href="../tapes.html" class="return-link">RETURN TO TAPE ARCHIVES</a>
+        </nav>
+    </footer>
+
+    <audio id="evidence-audio"></audio>
+
+    <script>
+        function playTape(filename) {
+            var player = document.getElementById('evidence-audio');
+            var selectedPath = "../audio/" + filename;
+
+            if (player.src.includes(filename)) {
+                if (player.paused) {
+                    player.play();
+                } else {
+                    player.pause();
+                }
+            } else {
+                player.src = selectedPath;
+                player.play();
+            }
+        }
+    </script>
+
+</body>
+</html>
