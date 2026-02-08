@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAW III Tapes | House of Jigsaw</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="archive-body">
+
+    <header class="site-header">
+        <img src="../images/saw-blade-header.png" alt="House of Jigsaw" class="header-blade">
+    </header>
+
+    <main class="archive-container">
+        
+        <h1 class="archive-title">SAW III TAPES</h1>
+
+        <div class="player-grid">
+            
+            <div class="tape-card" onclick="playTape('Jeff_Tape.mp3')">
+                <img src="../images/Jeff_Player.png" alt="Jeff Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Jeff_Freezer_Tape.mp3')">
+                <img src="../images/Jeff_Freezer_Player.png" alt="Jeff Freezer Room Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Jeff_PigVat_Tape.mp3')">
+                <img src="../images/Jeff_PigVat_Player.png" alt="Jeff Pig Vat Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Jeff_TheRack_Tape.mp3')">
+                <img src="../images/Jeff_TheRack_Player.png" alt="Jeff The Rack Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Jeff_Insurance_Policy_Tape.mp3')">
+                <img src="../images/Jeff_Insurance_Player.png" alt="Jeff Insurance Policy Tape">
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="global-footer">
+        <nav>
+            <a href="../tapes.html" class="return-link">RETURN TO TAPE ARCHIVES</a>
+        </nav>
+    </footer>
+
+    <audio id="evidence-audio"></audio>
+
+    <script>
+        function playTape(filename) {
+            var player = document.getElementById('evidence-audio');
+            var selectedPath = "../audio/" + filename;
+
+            if (player.src.includes(filename)) {
+                if (player.paused) {
+                    player.play();
+                } else {
+                    player.pause();
+                }
+            } else {
+                player.src = selectedPath;
+                player.play();
+            }
+        }
+    </script>
+
+</body>
+</html>
