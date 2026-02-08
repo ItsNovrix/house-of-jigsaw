@@ -214,7 +214,7 @@ body, html {
     display: grid;
     grid-template-columns: repeat(3, max-content); 
     gap: 40px;
-    justify-items: center; 
+    justify-content: center; 
 }
 
 .tape-card {
