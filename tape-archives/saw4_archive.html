@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAW IV Tapes | House of Jigsaw</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="archive-body">
+
+    <header class="site-header">
+        <img src="../images/saw-blade-header.png" alt="House of Jigsaw" class="header-blade">
+    </header>
+
+    <main class="archive-container">
+        
+        <h1 class="archive-title">SAW IV TAPES</h1>
+
+        <div class="player-grid">
+            
+            <div class="tape-card" onclick="playTape('Hoffman_Tape.mp3')">
+                <img src="../images/Hoffman_Player.png" alt="Hoffman Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Rigg_Tape_1.mp3')">
+                <img src="../images/Rigg_1_Player.png" alt="Rigg Tape 1">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Rigg_Tape_2.mp3')">
+                <img src="../images/Rigg_2_Player.png" alt="Rigg Tape 2">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Rigg_Tape_3.mp3')">
+                <img src="../images/Rigg_3_Player.png" alt="Rigg Tape 3">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Rigg_Tape_4.mp3')">
+                <img src="../images/Rigg_4_Player.png" alt="Rigg Tape 4">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Rigg_Tape_5.mp3')">
+                <img src="../images/Rigg_5_Player.png" alt="Rigg Tape 5">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Rigg_Tape_6.mp3')">
+                <img src="../images/Rigg_6_Player.png" alt="Rigg Tape 6">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Brenda_Tape.mp3')">
+                <img src="../images/Brenda_Player.png" alt="Brenda Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Ivan_Tape.mp3')">
+                <img src="../images/Ivan_Player.png" alt="Ivan Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Morgan_Tape.mp3')">
+                <img src="../images/Morgan_Player.png" alt="Morgan Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Perez_Tape.mp3')">
+                <img src="../images/Perez_Player.png" alt="Perez Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Art_Tape.mp3')">
+                <img src="../images/Art_Player.png" alt="Art Blank Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Cecil_Tape_1.mp3')">
+                <img src="../images/Cecil_1_Player.png" alt="Cecil Tape 1">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Cecil_Tape_2.mp3')">
+                <img src="../images/Cecil_2_Player.png" alt="Cecil Tape 2">
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="global-footer">
+        <nav>
+            <a href="../tapes.html" class="return-link">RETURN TO TAPE ARCHIVES</a>
+        </nav>
+    </footer>
+
+    <audio id="evidence-audio"></audio>
+
+    <script>
+        function playTape(filename) {
+            var player = document.getElementById('evidence-audio');
+            var selectedPath = "../audio/" + filename;
+
+            if (player.src.includes(filename)) {
+                if (player.paused) {
+                    player.play();
+                } else {
+                    player.pause();
+                }
+            } else {
+                player.src = selectedPath;
+                player.play();
+            }
+        }
+    </script>
+
+</body>
+</html>
