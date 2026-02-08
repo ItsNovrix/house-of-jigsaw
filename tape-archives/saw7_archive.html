@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAW VII Tapes | House of Jigsaw</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="archive-body">
+
+    <header class="site-header">
+        <img src="../images/saw-blade-header.png" alt="House of Jigsaw" class="header-blade">
+    </header>
+
+    <main class="archive-container">
+        
+        <h1 class="archive-title">SAW VII TAPES</h1>
+
+        <div class="player-grid">
+            
+            <div class="tape-card" onclick="playTape('Love_Triangle_Tape.mp3')">
+                <img src="../images/Love_Triangle_Player.png" alt="Public Execution Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Bobby_Tape.mp3')">
+                <img src="../images/Bobby_Player.png" alt="Bobby Dagen Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Evan_Tape.mp3')">
+                <img src="../images/Evan_Player.png" alt="Evan (Horsepower) Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Silence_Circle_Tape.mp3')">
+                <img src="../images/Silence_Circle_Player.png" alt="Silence Circle Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Impalement_Wheel_Tape.mp3')">
+                <img src="../images/Impalement_Wheel_Player.png" alt="Impalement Wheel Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Noose_Tape.mp3')">
+                <img src="../images/Noose_Player.png" alt="The Gallows/Noose Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Wisdom_Teeth_Tape.mp3')">
+                <img src="../images/Wisdom_Teeth_Player.png" alt="Wisdom Teeth Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Gibson_Tape_1.mp3')">
+                <img src="../images/Gibson_1_Player.png" alt="Gibson Tape 1">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Gibson_Tape_2.mp3')">
+                <img src="../images/Gibson_2_Player.png" alt="Gibson Tape 2">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Brazen_Bull_Tape.mp3')">
+                <img src="../images/Brazen_Bull_Player.png" alt="Brazen Bull Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Lawrence_Tape_2.mp3')">
+                <img src="../images/Lawrence_2_Player.png" alt="Dr. Gordon Video Tape 2">
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="global-footer">
+        <nav>
+            <a href="../tapes.html" class="return-link">RETURN TO TAPE ARCHIVES</a>
+        </nav>
+    </footer>
+
+    <audio id="evidence-audio"></audio>
+
+    <script>
+        function playTape(filename) {
+            var player = document.getElementById('evidence-audio');
+            var selectedPath = "../audio/" + filename;
+
+            if (player.src.includes(filename)) {
+                if (player.paused) {
+                    player.play();
+                } else {
+                    player.pause();
+                }
+            } else {
+                player.src = selectedPath;
+                player.play();
+            }
+        }
+    </script>
+
+</body>
+</html>
