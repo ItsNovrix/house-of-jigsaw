@@ -258,6 +258,22 @@ body, html {
     letter-spacing: 2px;
 }
 
+/* --- THE CENTERING LOGIC --- */
+
+/* Tape 7: Tell it to start in the middle of column 1 and 2 */
+.player-grid > :nth-child(7) {
+    grid-column: 1 / 3; 
+    justify-self: right; /* Pushes it to the right side of the span */
+    margin-right: -20px; /* Half of the 40px gap to hit the dead center */
+}
+
+/* Tape 8: Tell it to start in the middle of column 2 and 3 */
+.player-grid > :nth-child(8) {
+    grid-column: 2 / 4;
+    justify-self: left; /* Pushes it to the left side of the span */
+    margin-left: -20px;  /* Half of the 40px gap to hit the dead center */
+}
+
 /* Mobile Tweak for the grid */
 @media (max-width: 768px) {
     .player-grid {
