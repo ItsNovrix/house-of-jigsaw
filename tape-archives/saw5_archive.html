@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAW V Tapes | House of Jigsaw</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="archive-body">
+
+    <header class="site-header">
+        <img src="../images/saw-blade-header.png" alt="House of Jigsaw" class="header-blade">
+    </header>
+
+    <main class="archive-container">
+        
+        <h1 class="archive-title">SAW V TAPES</h1>
+
+        <div class="player-grid">
+            
+            <div class="tape-card" onclick="playTape('Seth_Tape.mp3')">
+                <img src="../images/Seth_Player.png" alt="Seth Baxter Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Strahm_Tape_1.mp3')">
+                <img src="../images/Strahm_1_Player.png" alt="Agent Strahm Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Jill_Tape.mp3')">
+                <img src="../images/Jill_Player.png" alt="Jill Tuck Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Fatal_Five_Tape_1.mp3')">
+                <img src="../images/Fatal_Five_1_Player.png" alt="Fatal Five - Collars">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Fatal_Five_Tape_2.mp3')">
+                <img src="../images/Fatal_Five_2_Player.png" alt="Fatal Five - Jars">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Fatal_Five_Tape_3.mp3')">
+                <img src="../images/Fatal_Five_3_Player.png" alt="Fatal Five - Bathtub">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Fatal_Five_Tape_4.mp3')">
+                <img src="../images/Fatal_Five_4_Player.png" alt="Fatal Five - Pint of Blood">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Glass_Coffin_Tape.mp3')">
+                <img src="../images/Glass_Coffin_Player.png" alt="Glass Coffin Tape">
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="global-footer">
+        <nav>
+            <a href="../tapes.html" class="return-link">RETURN TO TAPE ARCHIVES</a>
+        </nav>
+    </footer>
+
+    <audio id="evidence-audio"></audio>
+
+    <script>
+        function playTape(filename) {
+            var player = document.getElementById('evidence-audio');
+            var selectedPath = "../audio/" + filename;
+
+            if (player.src.includes(filename)) {
+                if (player.paused) {
+                    player.play();
+                } else {
+                    player.pause();
+                }
+            } else {
+                player.src = selectedPath;
+                player.play();
+            }
+        }
+    </script>
+
+</body>
+</html>
