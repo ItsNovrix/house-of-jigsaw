@@ -104,6 +104,12 @@ body, html {
     padding-bottom: 30px;
 }
 
+.workshop-body .global-footer,
+.tapes-body .global-footer {
+    position: absolute;
+    bottom: 0;
+}
+
 .global-footer nav {
     font-family: 'EdoSZ';
     font-size: 1.4rem;
