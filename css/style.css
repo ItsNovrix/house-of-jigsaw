@@ -13,6 +13,7 @@
 body, html {
     margin: 0;
     padding: 0;
+    min-height: 100%;
     height: 100%;
     background-color: #000;
     overflow-y: auto;
@@ -48,21 +49,21 @@ body, html {
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    align-items: center; /* This keeps the grid centered in the 'Light Box' */
+    align-items: center;
 }
 
 .workbench-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    grid-template-rows: repeat(2, 1fr);    /* Two rows */
-    gap: 35px 90px; /* Vertical gap, Horizontal gap */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 35px 90px;
     width: auto;
-    max-width: 650px; /* Limits width to stay inside the box */
-    margin-left: 190px;  /* Pushes icons to the RIGHT */
-    margin-top: -80px;  /* Pushes icons UP (negative moves up) */
+    max-width: 650px;
+    margin-left: 190px;
+    margin-top: -80px;
 }
 
-/* --- 5. ICONS & TITLES --- */
+/* --- 5. WORKBENCH ICONS & TITLES --- */
 .nav-item {
     text-decoration: none !important;
     display: flex;
@@ -73,7 +74,7 @@ body, html {
 
 .nav-item img {
     height: auto;
-    filter: brightness(0.8) contrast(1.1); /* Icons are clearer now */
+    filter: brightness(0.8) contrast(1.1);
     transition: filter 0.3s ease;
 }
 
@@ -83,14 +84,14 @@ body, html {
 .discord-icon img { width: 195px; }
 
 .nav-item:hover {
-    transform: scale(1.05); /* Subtle pop instead of floating up */
+    transform: scale(1.05);
 }
 
 .icon-title {
     font-family: 'EdoSZ';
     font-size: 1.4rem;
     margin-top: 10px;
-    color: #222; /* Darker text for the light background */
+    color: #222;
     letter-spacing: 1px;
     text-align: center;
 }
@@ -120,7 +121,7 @@ body, html {
     color: #ff0000 !important;
 }
 
-/* --- TAPES PAGE SPECIFIC --- */
+/* --- TAPES PAGE --- */
 .tapes-body {
     background: url('../images/Tapes_BG_V1.png') no-repeat center center fixed;
     background-size: cover;
@@ -133,12 +134,12 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 80px; /* Space for the saw blade header */
+    padding-top: 80px;
 }
 
 .movie-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 buttons per row */
+    grid-template-columns: repeat(5, 1fr);
     gap: 30px;
     max-width: 1200px;
     padding: 20px;
@@ -149,17 +150,17 @@ body, html {
 }
 
 .movie-item img {
-    width: 180px; /* Adjust based on button size */
+    width: 180px;
     height: auto;
     filter: brightness(0.9);
 }
 
 .movie-item:hover {
     transform: scale(1.1);
-    filter: brightness(1.2); /* Makes the logo 'pop' when selected */
+    filter: brightness(1.2);
 }
 
-/* --- THE RETURN SIGN --- */
+/* --- RETURN SIGN --- */
 .return-link {
     font-family: 'EdoSZ';
     color: #888 !important;
@@ -174,7 +175,7 @@ body, html {
     text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
 
-/* --- EVIDENCE ARCHIVE PAGE (SAW 1) --- */
+/* --- TAPES ARCHIVE (SAW 1) --- */
 
 .archive-body {
     /* Uses a dark background color. If you have a specific BG image for this room, add the url here */
@@ -184,18 +185,19 @@ body, html {
 }
 
 .archive-container {
+    min-height: 100vh;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px; /* Clears the saw blade header */
-    padding-bottom: 120px; /* Clears the footer */
+    padding-top: 100px;
+    padding-bottom: 120px;
 }
 
 .archive-title {
     font-family: 'EdoSZ';
     font-size: 2.5rem;
-    color: #a30000; /* Blood red */
+    color: #a30000;
     margin-bottom: 40px;
     letter-spacing: 3px;
     text-shadow: 0 0 5px rgba(163, 0, 0, 0.5);
@@ -212,8 +214,8 @@ body, html {
 }
 
 .tape-card {
-    background: transparent; /* No box */
-    border: none; /* No border */
+    background: transparent;
+    border: none;
     padding: 0;
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -222,8 +224,7 @@ body, html {
 
 .tape-card:hover {
     transform: scale(1.03);
-    /* Removed the border-color change since there is no border */
-    filter: drop-shadow(0 0 8px rgba(163, 0, 0, 0.5)); /* Red glow behind image instead */
+    filter: drop-shadow(0 0 8px rgba(163, 0, 0, 0.5));
 }
 
 .tape-card img {
@@ -231,11 +232,11 @@ body, html {
     height: auto;
     display: block;
     margin-bottom: 15px;
-    filter: sepia(0.2) contrast(1.1); /* Gritty aesthetic */
+    filter: sepia(0.2) contrast(1.1);
 }
 
 .tape-label {
-    font-family: 'EdoSZ'; /* Matches your site font */
+    font-family: 'EdoSZ';
     font-size: 1.8rem;
     color: #ccc;
     letter-spacing: 2px;
