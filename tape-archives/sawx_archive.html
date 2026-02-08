@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAW X Tapes | House of Jigsaw</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="archive-body">
+
+    <header class="site-header">
+        <img src="../images/saw-blade-header.png" alt="House of Jigsaw" class="header-blade">
+    </header>
+
+    <main class="archive-container">
+        
+        <h1 class="archive-title">SAW X TAPES</h1>
+
+        <div class="player-grid">
+            
+            <div class="tape-card" onclick="playTape('SawX_Tape_1.mp3')">
+                <img src="../images/SawX_1_Player.png" alt="Saw X Tape 1">
+            </div>
+
+            <div class="tape-card" onclick="playTape('SawX_Tape_2.mp3')">
+                <img src="../images/SawX_2_Player.png" alt="Saw X Tape 2">
+            </div>
+
+            <div class="tape-card" onclick="playTape('SawX_Tape_3.mp3')">
+                <img src="../images/SawX_3_Player.png" alt="Saw X Tape 3">
+            </div>
+
+            <div class="tape-card" onclick="playTape('SawX_Tape_4.mp3')">
+                <img src="../images/SawX_4_Player.png" alt="Saw X Tape 4">
+            </div>
+
+            <div class="tape-card" onclick="playTape('SawX_Tape_5.mp3')">
+                <img src="../images/SawX_5_Player.png" alt="Saw X Tape 5">
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="global-footer">
+        <nav>
+            <a href="../tapes.html" class="return-link">RETURN TO TAPE ARCHIVES</a>
+        </nav>
+    </footer>
+
+    <audio id="evidence-audio"></audio>
+
+    <script>
+        function playTape(filename) {
+            var player = document.getElementById('evidence-audio');
+            var selectedPath = "../audio/" + filename;
+
+            if (player.src.includes(filename)) {
+                if (player.paused) {
+                    player.play();
+                } else {
+                    player.pause();
+                }
+            } else {
+                player.src = selectedPath;
+                player.play();
+            }
+        }
+    </script>
+
+</body>
+</html>
