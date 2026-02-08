@@ -211,8 +211,8 @@ body, html {
 }
 
 .player-grid {
-    display: grid;
-    grid-template-columns: repeat(3, max-content); 
+    display: flex;
+    flex-wrap: wrap;
     gap: 40px;
     max-width: 1100px;
     width: 90%;
@@ -220,6 +220,7 @@ body, html {
 }
 
 .tape-card {
+    width:300px;
     background: transparent;
     border: none;
     padding: 0;
