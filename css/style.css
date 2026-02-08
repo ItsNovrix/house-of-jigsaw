@@ -1,7 +1,7 @@
 /* --- 1. FONTS --- */
 @font-face {
-    font-family: 'ChickenScratch';
-    src: url('../fonts/128_ChickenScratch AOE.ttf');
+    font-family: 'EdoSZ';
+    src: url('../fonts/edosz.ttf');
 }
 
 @font-face {
@@ -87,7 +87,7 @@ body, html {
 }
 
 .icon-title {
-    font-family: 'ChickenScratch';
+    font-family: 'EdoSZ';
     font-size: 1.4rem;
     margin-top: 10px;
     color: #222; /* Darker text for the light background */
@@ -105,7 +105,7 @@ body, html {
 }
 
 .global-footer nav {
-    font-family: 'ChickenScratch';
+    font-family: 'EdoSZ';
     font-size: 1.4rem;
     color: #666;
     letter-spacing: 2px;
@@ -162,7 +162,7 @@ body, html {
 
 /* --- THE RETURN SIGN --- */
 .return-link {
-    font-family: 'ChickenScratch';
+    font-family: 'EdoSZ';
     color: #888 !important;
     text-decoration: none;
     font-size: 1.5rem;
@@ -194,7 +194,7 @@ body, html {
 }
 
 .archive-title {
-    font-family: 'ChickenScratch';
+    font-family: 'EdoSZ';
     font-size: 2.5rem;
     color: #a30000; /* Blood red */
     margin-bottom: 40px;
@@ -235,7 +235,7 @@ body, html {
 }
 
 .tape-label {
-    font-family: 'ChickenScratch'; /* Matches your site font */
+    font-family: 'EdoSZ'; /* Matches your site font */
     font-size: 1.8rem;
     color: #ccc;
     letter-spacing: 2px;
