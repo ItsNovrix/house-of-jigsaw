@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAW VI Tapes | House of Jigsaw</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="archive-body">
+
+    <header class="site-header">
+        <img src="../images/saw-blade-header.png" alt="House of Jigsaw" class="header-blade">
+    </header>
+
+    <main class="archive-container">
+        
+        <h1 class="archive-title">SAW VI TAPES</h1>
+
+        <div class="player-grid">
+            
+            <div class="tape-card" onclick="playTape('Pound_of_Flesh_Tape.mp3')">
+                <img src="../images/Pound_of_Flesh_Player.png" alt="Pound of Flesh Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Oxygen_Crusher_Tape.mp3')">
+                <img src="../images/Oxygen_Crusher_Player.png" alt="Oxygen Crusher Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Gallows_Tape.mp3')">
+                <img src="../images/Gallows_Player.png" alt="Gallows Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Steam_Maze_Tape.mp3')">
+                <img src="../images/Steam_Maze_Player.png" alt="Steam Maze Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Carousel_Tape.mp3')">
+                <img src="../images/Carousel_Player.png" alt="Carousel Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Pamela_Tape.mp3')">
+                <img src="../images/Pamela_Player.png" alt="Pamela Jenkins Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Tara_Tape.mp3')">
+                <img src="../images/Tara_Player.png" alt="Tara Abbott Tape">
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="global-footer">
+        <nav>
+            <a href="../tapes.html" class="return-link">RETURN TO TAPE ARCHIVES</a>
+        </nav>
+    </footer>
+
+    <audio id="evidence-audio"></audio>
+
+    <script>
+        function playTape(filename) {
+            var player = document.getElementById('evidence-audio');
+            var selectedPath = "../audio/" + filename;
+
+            if (player.src.includes(filename)) {
+                if (player.paused) {
+                    player.play();
+                } else {
+                    player.pause();
+                }
+            } else {
+                player.src = selectedPath;
+                player.play();
+            }
+        }
+    </script>
+
+</body>
+</html>
