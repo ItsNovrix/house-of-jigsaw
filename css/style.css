@@ -214,6 +214,8 @@ body, html {
     display: grid;
     grid-template-columns: repeat(3, max-content); 
     gap: 40px;
+    max-width: 1100px;
+    width: 90%;
     justify-content: center; 
 }
 
@@ -244,18 +246,6 @@ body, html {
     font-size: 1.8rem;
     color: #ccc;
     letter-spacing: 2px;
-}
-
-.player-grid > :nth-last-child(1):nth-child(3n + 1) {
-    grid-column: 2 / 3;
-}
-
-.player-grid > :nth-last-child(2):nth-child(3n + 1) {
-    grid-column: 2 / 3;
-}
-
-.player-grid > :nth-last-child(1):nth-child(3n + 2) {
-    grid-column: 3 / 4;
 }
 
 /* Mobile Tweak for the grid */
