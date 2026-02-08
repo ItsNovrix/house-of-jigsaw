@@ -211,15 +211,18 @@ body, html {
 }
 
 .player-grid {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
     grid-template-columns: repeat(3, 1fr); 
     gap: 40px;
     max-width: 1100px;
     width: 90%;
-    justify-items: center;
+    margin: 0 auto;
 }
 
 .tape-card {
+    flex: 0 1 300px;
     background: transparent;
     border: none;
     padding: 0;
@@ -263,12 +266,5 @@ body, html {
     .player-grid {
         grid-template-columns: 1fr; /* Stack vertically on phones */
         width: 80%;
-    }
-
-    /* Disable the centering logic on mobile so it stays a single list */
-    .player-grid > :nth-child(7),
-    .player-grid > :nth-child(8) {
-        grid-column: auto;
-        margin-left: 0;
     }
 }
