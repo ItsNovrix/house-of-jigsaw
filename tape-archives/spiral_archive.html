@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiral Tapes | House of Jigsaw</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="archive-body">
+
+    <header class="site-header">
+        <img src="../images/saw-blade-header.png" alt="House of Jigsaw" class="header-blade">
+    </header>
+
+    <main class="archive-container">
+        
+        <h1 class="archive-title">SPIRAL TAPES</h1>
+
+        <div class="player-grid">
+            
+            <div class="tape-card" onclick="playTape('Tongue_Tape.mp3')">
+                <img src="../images/Tongue_Player.png" alt="Tongue Trap Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Finger_Tape.mp3')">
+                <img src="../images/Finger_Player.png" alt="Finger Trap Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Reformation_Tape.mp3')">
+                <img src="../images/Reformation_Player.png" alt="Reformation Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Wax_Tape.mp3')">
+                <img src="../images/Wax_Player.png" alt="Wax Trap Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Bone_Tape.mp3')">
+                <img src="../images/Bone_Player.png" alt="Bone Marrow Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Slaughter_Tape.mp3')">
+                <img src="../images/Slaughter_Player.png" alt="Slaughterhouse Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Glass_Tape.mp3')">
+                <img src="../images/Glass_Player.png" alt="Glass Grinder Tape">
+            </div>
+
+            <div class="tape-card" onclick="playTape('Blood_Puppet_Tape.mp3')">
+                <img src="../images/Blood_Puppet_Player.png" alt="Blood Puppet Tape">
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="global-footer">
+        <nav>
+            <a href="../tapes.html" class="return-link">RETURN TO TAPE ARCHIVES</a>
+        </nav>
+    </footer>
+
+    <audio id="evidence-audio"></audio>
+
+    <script>
+        function playTape(filename) {
+            var player = document.getElementById('evidence-audio');
+            var selectedPath = "../audio/" + filename;
+
+            if (player.src.includes(filename)) {
+                if (player.paused) {
+                    player.play();
+                } else {
+                    player.pause();
+                }
+            } else {
+                player.src = selectedPath;
+                player.play();
+            }
+        }
+    </script>
+
+</body>
+</html>
